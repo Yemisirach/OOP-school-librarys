@@ -1,5 +1,8 @@
 require_relative './class/app'
 
-app = App.new
+def main
+  app = App.new
+  app.run
+end
 
-app.run
+main
