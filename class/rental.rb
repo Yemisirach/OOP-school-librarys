@@ -9,7 +9,7 @@ class Rental
     person['rentals'] << self
   end
 
-   def to_h
+  def to_h
     {
       class: self.class.name,
       object_id: object_id,
@@ -18,5 +18,4 @@ class Rental
       person: @person
     }
   end
- 
 end

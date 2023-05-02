@@ -73,7 +73,7 @@ class App
   end
 
   def init_library
-    if File.exist?('books.json') || File.exist?('people.json') || File.exist?('rentals.json') 
+    if File.exist?('books.json') || File.exist?('people.json') || File.exist?('rentals.json')
       puts 'loading data'
     else
       puts 'no data proceeding'

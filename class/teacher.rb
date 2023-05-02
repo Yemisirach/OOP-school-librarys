@@ -23,6 +23,4 @@ class Teacher < Person
       rentals: @rentals
     }
   end
-    
-  
 end
