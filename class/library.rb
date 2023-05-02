@@ -2,36 +2,45 @@ require_relative './teacher'
 require_relative './student'
 require_relative './book'
 require_relative './rental'
-require 'json'
+require_relative "./readandwrite"
 
 class Library
+
+  include Write
   attr_accessor :people, :rentals, :books
 
   def initialize
-    @people = []
-    @rentals = []
-    @books = []
+    @people = read_item('people.json')
+    @books = read_item('books.json')
+    @rentals = read_item('rentals.json')
   end
 
   def create_person(person)
     @people << person
+    write_to_file(@people,'people.json')
+  
   end
 
   def create_book(book)
     @books << book
+   write_to_file(@books,'books.json')
+
   end
 
   def create_rental(rental)
     @rentals << rental
+  write_to_file(@rentals,'rentals.json')
   end
 
   def list_books
-    @books.each_with_index { |book, idx| puts "#{idx}) Title: #{book.title} Author: #{book.author}" }
+    @books= read_item('books.json')
+    @books.each_with_index { |book, idx| puts "#{idx}) Title: #{book['title']} Author: #{book['author']}" }
   end
 
   def list_people
+    @people=read_item('people.json')
     @people.each_with_index do |person, idx|
-      puts "#{idx}) [#{person.class}] Name:#{person.name} ID: #{person.id} Age: #{person.age}"
+      puts "#{idx}) [#{person['class']}] Name:#{person['name']} ID: #{person['id']} Age: #{person['age']}"
     end
   end
 
@@ -48,7 +57,8 @@ class Library
   end
 
   def find_person_by_id(id)
-    @people.select { |person| person.id == id }.first
+    @people=read_item('people.json')
+    @people.select { |person| person['id'] == id }.first
   end
 
   def list_rentals_by_person_id(id)
@@ -56,43 +66,12 @@ class Library
 
     if person
       puts 'Rentals:'
+      @rentals=read_item('rentals.json')
       @rentals.each do |rental|
-        puts "Date: #{rental.date} Book: \" #{rental.book.title} \" by #{rental.book.author}" if rental.person.id == id
+        puts "Date: #{rental['date']} Book: \" #{rental['book']['title']} \" by #{rental['book']['author']}" if rental['person']['id'] == id
       end
     else
       puts "no such person with ID #{id} exists"
-    end
-  end
-
-  def save_data
-    data = { people: @people, books: @books, rentals: @rentals }.to_json
-    File.write('data.json',data)
-  end
-
-  def load_data
-    data = File.read('data.json')
-    parsed_data = JSON.parse(data)
-
-    # Create books
-    parsed_data['books'].each do |book_data|
-      books << Book.new(book_data['title'], book_data['author'])
-    end
-
-    # Create people
-    parsed_data['people'].each do |person_data|
-      people << if person_data['type'] == 'teacher'
-                  Teacher.new(person_data['age'], person_data['specialization'], person_data['name'])
-                else
-                  Student.new(person_data['age'], person_data['name'],
-                              parent_permission: person_data['parent_permission'])
-                end
-    end
-
-    # Create rentals
-    parsed_data['rentals'].each do |rental_data|
-      book = books.find { |book| book['title'] == rental_data['book']['title'] }
-      person = people.find { |person| person.id == rental_data['person']['id'] }
-      rentals << Rental.new(rental_data['date'], book, person,)
     end
   end
 

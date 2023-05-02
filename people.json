@@ -1,0 +1,25 @@
+[
+  {
+    "class": "Student",
+    "object_id": 60,
+    "id": 868,
+    "name": "hjkjkjk",
+    "age": "343434",
+    "parent_permission": true,
+    "rentals": [
+
+    ],
+    "classroom": null
+  },
+  {
+    "class": "Teacher",
+    "object_id": 80,
+    "id": 361,
+    "name": "mnmn",
+    "age": "444",
+    "specialization": "uuiui",
+    "rentals": [
+
+    ]
+  }
+]

@@ -1,7 +1,6 @@
 require_relative './nameable'
 
 class Person < Numerable
-  attr_reader :id
 
   attr_accessor :name, :age, :rentals, :id
 
@@ -24,9 +23,6 @@ class Person < Numerable
 
   def correct_name
     @name
-  end
-  def to_json(*args)
-    {id:@id,name: @name, age: @age , parent_permission: @parent_permission  }.to_json(*args)
   end
   private :of_age?
 end

@@ -3,7 +3,7 @@ class Teacher < Person
   attr_accessor :specialization
 
   def initialize(age, specialization, name = 'Uknown', parent_permission: true)
-    super(age, name, parent_permission: parent_permission)
+    super(age, name, parent_permission: parent_permission,)
 
     @specialization = specialization
   end
@@ -12,7 +12,17 @@ class Teacher < Person
     true
   end
 
-  def to_json(*args)
-    { age: @age ,name: @name, specialization:@specialization  }.to_json(*args)
+  def to_h
+    {
+      class: self.class.name,
+      object_id: object_id,
+      id: @id,
+      name: @name,
+      age: @age,
+      specialization: @specialization,
+      rentals: @rentals
+    }
   end
+    
+  
 end
