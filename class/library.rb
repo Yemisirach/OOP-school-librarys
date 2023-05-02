@@ -69,4 +69,31 @@ class Library
     File.write('data.json',data)
   end
 
+  def load_data
+    data = File.read('data.json')
+    parsed_data = JSON.parse(data)
+
+    # Create books
+    parsed_data['books'].each do |book_data|
+      books << Book.new(book_data['title'], book_data['author'])
+    end
+
+    # Create people
+    parsed_data['people'].each do |person_data|
+      people << if person_data['type'] == 'teacher'
+                  Teacher.new(person_data['age'], person_data['specialization'], person_data['name'])
+                else
+                  Student.new(person_data['age'], person_data['name'],
+                              parent_permission: person_data['parent_permission'])
+                end
+    end
+
+    # Create rentals
+    parsed_data['rentals'].each do |rental_data|
+      book = books.find { |book| book['title'] == rental_data['book']['title'] }
+      person = people.find { |person| person.id == rental_data['person']['id'] }
+      rentals << Rental.new(rental_data['date'], book, person,)
+    end
+  end
+
 end
