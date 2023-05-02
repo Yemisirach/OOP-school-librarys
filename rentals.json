@@ -1,0 +1,53 @@
+[
+  {
+    "class": "Rental",
+    "object_id": 140,
+    "date": "4545",
+    "book": {
+      "class": "Book",
+      "object_id": 100,
+      "title": "nmnmnm",
+      "author": "jkkjj",
+      "rentals": [
+        "#<Rental:0x000001e6ff69e168>"
+      ]
+    },
+    "person": {
+      "class": "Teacher",
+      "object_id": 80,
+      "id": 361,
+      "name": "mnmn",
+      "age": "444",
+      "specialization": "uuiui",
+      "rentals": [
+        "#<Rental:0x000001e6ff69e168>"
+      ]
+    }
+  },
+  {
+    "class": "Rental",
+    "object_id": 60,
+    "date": "655",
+    "book": {
+      "class": "Book",
+      "object_id": 120,
+      "title": "fvvfgfg",
+      "author": "nhnhhhy",
+      "rentals": [
+        "#<Rental:0x0000016b9ff7c748>"
+      ]
+    },
+    "person": {
+      "class": "Student",
+      "object_id": 60,
+      "id": 868,
+      "name": "hjkjkjk",
+      "age": "343434",
+      "parent_permission": true,
+      "rentals": [
+        "#<Rental:0x0000016b9ff7c748>"
+      ],
+      "classroom": null
+    }
+  }
+]

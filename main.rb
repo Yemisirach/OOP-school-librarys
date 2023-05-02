@@ -16,6 +16,7 @@ end
 def main
   library = Library.new
   app = App.new(library)
+  app.init_library
   loop do
     list_options
     value = gets.chomp

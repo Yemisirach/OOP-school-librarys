@@ -71,4 +71,12 @@ class App
     puts 'Thank you for using this app'
     exit
   end
+
+  def init_library
+    if File.exist?('books.json') || File.exist?('people.json') || File.exist?('rentals.json')
+      puts 'loading data'
+    else
+      puts 'no data proceeding'
+    end
+  end
 end

@@ -1,0 +1,20 @@
+[
+  {
+    "class": "Book",
+    "object_id": 100,
+    "title": "nmnmnm",
+    "author": "jkkjj",
+    "rentals": [
+
+    ]
+  },
+  {
+    "class": "Book",
+    "object_id": 120,
+    "title": "fvvfgfg",
+    "author": "nhnhhhy",
+    "rentals": [
+
+    ]
+  }
+]
