@@ -109,6 +109,11 @@ To run the project, execute the following command:
 - Twitter: [@Ambrose kibet](https://twitter.com/ambrose_kibet)
 - LinkedIn: [Ambrose kibet](https://linkedin.com/in/ambrose-kibet)
 
+### 👤 **Yemisirach Tamirat**
+
+- GitHub: [@yemisrach](https://github.com/Yemisirach)
+- Twitter: [@Yemisirach](https://twitter.com/tamiratyemsrach)
+- LinkedIn: [@Yemisirach](https://www.linkedin.com/in/yemisirach)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
