@@ -69,6 +69,16 @@ class App
 
   def handle_seven
     puts 'Thank you for using this app'
+    @library.save_data
     exit
+  end
+
+  def init_library
+    if File.exist?('data.json')
+      puts 'loading data'
+      @library.load_data
+    else
+      puts 'no data proceeding'
+    end
   end
 end

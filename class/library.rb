@@ -2,6 +2,7 @@ require_relative './teacher'
 require_relative './student'
 require_relative './book'
 require_relative './rental'
+require 'json'
 
 class Library
   attr_accessor :people, :rentals, :books
@@ -62,4 +63,10 @@ class Library
       puts "no such person with ID #{id} exists"
     end
   end
+
+  def save_data
+    data = { people: @people, books: @books, rentals: @rentals }.to_json
+    File.write('data.json',data)
+  end
+
 end
