@@ -16,5 +16,14 @@
     "rentals": [
 
     ]
+  },
+  {
+    "class": "Book",
+    "object_id": 60,
+    "title": "dssasas",
+    "author": "assasa",
+    "rentals": [
+
+    ]
   }
 ]
