@@ -1,9 +1,8 @@
-require_relative "../class/person.rb"
-
+require_relative '../class/person'
 
 describe Person do
   before(:each) do
-    @person = Person.new(27,"math" )
+    @person = Person.new(27, 'math')
   end
 
   describe 'Person' do
@@ -11,12 +10,7 @@ describe Person do
       expect(@person).to be_an_instance_of(Person)
     end
     it 'checks if the Person can_use_services' do
-        
-        expect(@person.can_use_services?).to be true
+      expect(@person.can_use_services?).to be true
     end
-   
   end
-
-   
- 
 end

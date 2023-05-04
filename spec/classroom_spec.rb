@@ -1,11 +1,10 @@
-require_relative "../class/classroom.rb"
-require_relative "../class/student.rb"
-
+require_relative '../class/classroom'
+require_relative '../class/student'
 
 describe Classroom do
   before(:each) do
     @classroom = Classroom.new('Maths')
-    @student = Student.new(26,  'esada')
+    @student = Student.new(26, 'esada')
   end
 
   describe 'Classroom' do
@@ -14,7 +13,7 @@ describe Classroom do
     end
   end
 
-   describe 'Can Add students' do
+  describe 'Can Add students' do
     context 'With valid input' do
       it 'checks if the classroom contains student' do
         @classroom.add_student(@student)
@@ -22,5 +21,4 @@ describe Classroom do
       end
     end
   end
- 
 end

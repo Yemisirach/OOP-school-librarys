@@ -1,13 +1,11 @@
-require_relative "../class/person.rb"
-require_relative "../class/capitalize.rb"
+require_relative '../class/person'
+require_relative '../class/capitalize'
 
 describe Person do
- 
   before(:each) do
-    @person_one = Person.new(27, "abcdefghijkl")
-    @person_capitalize=CapitalizeDecorator.new(@person_one)
+    @person_one = Person.new(27, 'abcdefghijkl')
+    @person_capitalize = CapitalizeDecorator.new(@person_one)
   end
-
 
   describe 'instance' do
     it 'checks if its an instance of person' do
@@ -18,12 +16,11 @@ describe Person do
     end
   end
 
-   describe 'can_use Capitalize Decorator' do
+  describe 'can_use Capitalize Decorator' do
     context 'Capitalize decoretor' do
       it 'checks if the correct_name Decorotir method capitalizes name ' do
-        expect(@person_capitalize.correct_name).to eq ('Abcdefghijkl')
+        expect(@person_capitalize.correct_name).to eq('Abcdefghijkl')
       end
     end
   end
- 
 end

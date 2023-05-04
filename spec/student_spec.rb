@@ -1,9 +1,7 @@
-
-
-require_relative "../class/student.rb"
+require_relative '../class/student'
 describe Student do
   before(:each) do
-    @student = Student.new(27,"yemi")
+    @student = Student.new(27, 'yemi')
   end
 
   describe 'Student' do
@@ -11,8 +9,7 @@ describe Student do
       expect(@student).to be_an_instance_of(Student)
     end
     it 'checks if the Student plays hookey' do
-        expect(@student.play_hooky).to eq ('¯(ツ)/¯')
-      end
+      expect(@student.play_hooky).to eq('¯(ツ)/¯')
+    end
   end
-      
- end
+end

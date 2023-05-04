@@ -1,9 +1,8 @@
-require_relative "../class/teacher.rb"
-
+require_relative '../class/teacher'
 
 describe Teacher do
   before(:each) do
-    @teacher = Teacher.new(27,"math" "yemi")
+    @teacher = Teacher.new(27, 'math', 'yemi')
   end
 
   describe 'Teacher' do
@@ -12,7 +11,7 @@ describe Teacher do
     end
   end
 
-   describe 'can_use_services' do
+  describe 'can_use_services' do
     context 'With valid input' do
       it 'checks if the teacher can_use_services' do
         @teacher.can_use_services?
@@ -20,5 +19,4 @@ describe Teacher do
       end
     end
   end
- 
 end

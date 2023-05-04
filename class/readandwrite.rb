@@ -1,13 +1,12 @@
 require 'json'
 require_relative './rental'
 
-
 module Write
   def read_item(file)
     read = []
-    if File.exist?(file ) and File.size(file) != 0
+    if File.exist?(file) and File.size(file) != 0
       data = File.read(file)
-      read = JSON.parse(data )
+      read = JSON.parse(data)
     else
       []
     end

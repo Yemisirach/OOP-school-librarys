@@ -9,8 +9,7 @@ class Book
   end
 
   def add_rental(rental)
-   @rentals<< rental
-
+    @rentals << rental
   end
 
   def to_h
