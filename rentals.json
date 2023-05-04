@@ -49,5 +49,82 @@
       ],
       "classroom": null
     }
+  },
+  {
+    "class": "Rental",
+    "object_id": 80,
+    "date": "2323232",
+    "book": {
+      "class": "Book",
+      "object_id": 60,
+      "title": "dssasas",
+      "author": "assasa",
+      "rentals": [
+        "#<Rental:0x000001221f3e7a28>"
+      ]
+    },
+    "person": {
+      "class": "Student",
+      "object_id": 60,
+      "id": 868,
+      "name": "hjkjkjk",
+      "age": "343434",
+      "parent_permission": true,
+      "rentals": [
+        "#<Rental:0x000001221f3e7a28>"
+      ],
+      "classroom": null
+    }
+  },
+  {
+    "class": "Rental",
+    "object_id": 60,
+    "date": "4344",
+    "book": {
+      "class": "Book",
+      "object_id": 60,
+      "title": "dssasas",
+      "author": "assasa",
+      "rentals": [
+        "#<Rental:0x000001b47a0e9c98>"
+      ]
+    },
+    "person": {
+      "class": "Teacher",
+      "object_id": 80,
+      "id": 361,
+      "name": "mnmn",
+      "age": "444",
+      "specialization": "uuiui",
+      "rentals": [
+        "#<Rental:0x000001b47a0e9c98>"
+      ]
+    }
+  },
+  {
+    "class": "Rental",
+    "object_id": 60,
+    "date": "34343",
+    "book": {
+      "class": "Book",
+      "object_id": 120,
+      "title": "fvvfgfg",
+      "author": "nhnhhhy",
+      "rentals": [
+        "#<Rental:0x000001fb6bb7d7a8>"
+      ]
+    },
+    "person": {
+      "class": "Student",
+      "object_id": 60,
+      "id": 868,
+      "name": "hjkjkjk",
+      "age": "343434",
+      "parent_permission": true,
+      "rentals": [
+        "#<Rental:0x000001fb6bb7d7a8>"
+      ],
+      "classroom": null
+    }
   }
 ]

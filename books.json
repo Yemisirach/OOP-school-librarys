@@ -14,6 +14,24 @@
     "title": "fvvfgfg",
     "author": "nhnhhhy",
     "rentals": [
+      "#<Rental:0x000001fb6bb7d7a8>"
+    ]
+  },
+  {
+    "class": "Book",
+    "object_id": 60,
+    "title": "dssasas",
+    "author": "assasa",
+    "rentals": [
+
+    ]
+  },
+  {
+    "class": "Book",
+    "object_id": 80,
+    "title": "dds",
+    "author": "sdxsss",
+    "rentals": [
 
     ]
   }

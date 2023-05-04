@@ -1,4 +1,6 @@
 require 'json'
+require_relative './rental'
+
 module Write
   def read_item(file)
     read = []
